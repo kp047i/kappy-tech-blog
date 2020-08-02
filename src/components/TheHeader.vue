@@ -1,8 +1,8 @@
 <template>
-  <header class="fixed top-0 bg-navy w-full p-4 py-4">
+  <header class="bg-navy w-full p-4 py-4">
     <div class="relative flex justify-start w-full">
       <nuxt-link to="/">
-        <h1 class="text-2xl text-cream">kappy tech blog</h1>
+        <div class="text-2xl text-cream">kappy tech blog</div>
       </nuxt-link>
     </div>
   </header>
