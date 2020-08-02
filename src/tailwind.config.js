@@ -14,6 +14,9 @@ module.exports = {
         cream: '#FEF6E3',
       },
     },
+    container: {
+      center: true,
+    },
   },
   variants: {},
   plugins: [],
