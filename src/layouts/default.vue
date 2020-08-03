@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div>
     <TheHeader />
     <Nuxt />
   </div>
@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import TheHeader from '@/components/TheHeader.vue'
+import TheHeader from '@/components/global/TheHeader.vue'
 
 export default Vue.extend({
   components: {
