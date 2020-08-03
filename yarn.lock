@@ -1329,7 +1329,7 @@
     consola "^2.11.3"
     eslint-loader "^4.0.2"
 
-"@nuxtjs/tailwindcss@^2.1.0":
+"@nuxtjs/tailwindcss@^2.1.1":
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@nuxtjs/tailwindcss/-/tailwindcss-2.1.1.tgz#7120a269b5a43d4a9d60947f7f734458cf86c180"
   integrity sha512-9DC7Adds1AKvxMbfW0Jd2EPpDUh3pVVE4wwiuJ45CiwOcz9EIU3Lc02h+bjnb1QFf07ZxJVO2xkN00IwQEFp8w==
