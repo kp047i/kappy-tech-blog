@@ -5,7 +5,8 @@ const config: Configuration = {
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
    */
-  mode: 'universal',
+  // mode: 'universal',
+  ssr: true,
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
@@ -14,7 +15,7 @@ const config: Configuration = {
   /*
    ** Src directory
    */
-  srcDir: 'src',
+  // srcDir: 'src',
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head

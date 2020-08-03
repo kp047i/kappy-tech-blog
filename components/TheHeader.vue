@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-navy w-full p-4 py-4">
+  <header class="bg-navy w-full px-4 py-4">
     <div class="relative flex justify-start w-full">
       <nuxt-link to="/">
         <div class="text-2xl text-cream">kappy tech blog</div>
