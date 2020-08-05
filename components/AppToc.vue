@@ -1,5 +1,5 @@
 <template>
-  <no-ssr>
+  <client-only>
     <aside>
       <nav>
         <scrollactive active-class="active" class="my-nav fixed">
@@ -10,15 +10,17 @@
               :class="{ toc2: link.depth === 2, toc3: link.depth === 3 }"
               class="py-2"
             >
-              <NuxtLink :to="`#${link.id}`" class="scrollactive-item">{{
-                link.text
-              }}</NuxtLink>
+              <NuxtLink
+                :to="`#${link.id}`"
+                class="scrollactive-item hover:text-copper"
+                >{{ link.text }}</NuxtLink
+              >
             </li>
           </ul>
         </scrollactive>
       </nav>
     </aside>
-  </no-ssr>
+  </client-only>
 </template>
 
 <script lang="ts">

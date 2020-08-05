@@ -31,7 +31,9 @@ const config: Configuration = {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '',
+        content:
+          process.env.npm_package_description ||
+          '勉強した内容や得た知見をメモしたり共有するブログ',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -44,7 +46,10 @@ const config: Configuration = {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [{ src: '~/plugins/scrollactive.ts', ssr: false }],
+  plugins: [
+    { src: '~/plugins/scrollactive.ts', ssr: false },
+    { src: '~/plugins/font-awesome', ssr: false },
+  ],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -64,6 +69,7 @@ const config: Configuration = {
   modules: [
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
+    'nuxt-fontawesome',
   ],
   /*
    ** Content module configuration
@@ -75,6 +81,9 @@ const config: Configuration = {
         theme: 'prism-themes/themes/prism-material-oceanic.css',
       },
     },
+  },
+  fontawesome: {
+    component: 'fa',
   },
   /*
    ** Build configuration

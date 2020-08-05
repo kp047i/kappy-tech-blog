@@ -1,6 +1,6 @@
 <template>
   <footer class="bg-navy w-full px-4 py-4">
-    <p class="p-2 text-center text-xs text-cream">
+    <p class="p-2 text-center text-xs text-latte">
       &copy; 2020 <a href="https://github.com/kp047i">kappy</a>
     </p>
   </footer>
