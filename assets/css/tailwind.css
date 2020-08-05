@@ -18,8 +18,9 @@ body {
 }
 
 .container {
-  width: 960px;
-  max-width: 100%;
+  /* width: 960px;
+  max-width: 100%; */
+  max-width: 960px;
 }
 
 .nuxt-content {
