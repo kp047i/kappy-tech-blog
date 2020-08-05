@@ -11,7 +11,8 @@ module.exports = {
         navy: '#212D40',
       },
       textColor: {
-        cream: '#FEF6E3',
+        latte: '#FEF6E3',
+        // banana: '#FDEBC2',
         copper: '#D66853',
       },
     },
