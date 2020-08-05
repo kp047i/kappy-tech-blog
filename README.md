@@ -1,4 +1,10 @@
-# kappy-blog
+# kappy-tech-blog
+
+勉強した内容や得た知見をメモしたり共有するブログ
+
+Nuxt + Nuxt/Content + Netlifyで構成されている
+
+[https://www.kappy.dev/](https://www.kappy.dev/)
 
 ## Build Setup
 
@@ -17,4 +23,7 @@ $ yarn start
 $ yarn generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## 編集リクエスト
+
+バグや誤字、コメントなどがあればissuesにお願いいたします。
+
