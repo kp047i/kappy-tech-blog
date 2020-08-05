@@ -12,6 +12,7 @@ module.exports = {
       },
       textColor: {
         cream: '#FEF6E3',
+        copper: '#D66853',
       },
     },
     container: {
