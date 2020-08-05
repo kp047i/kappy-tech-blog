@@ -49,6 +49,7 @@ const config: Configuration = {
   plugins: [
     { src: '~/plugins/scrollactive.ts', ssr: false },
     { src: '~/plugins/font-awesome', ssr: false },
+    { src: '~plugins/ga.js', mode: 'client' },
   ],
   /*
    ** Auto import components
@@ -62,6 +63,7 @@ const config: Configuration = {
     '@nuxt/typescript-build',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/google-analytics',
   ],
   /*
    ** Nuxt.js modules
@@ -84,6 +86,9 @@ const config: Configuration = {
   },
   fontawesome: {
     component: 'fa',
+  },
+  googleAnalytics: {
+    id: 'UA-138249132-2',
   },
   /*
    ** Build configuration
