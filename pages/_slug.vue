@@ -25,7 +25,6 @@ export default Vue.extend({
   },
   async asyncData({ $content, params }: Context): Promise<object> {
     const article = await $content(params.slug).fetch()
-    console.log(article.description)
     return {
       article,
     }
