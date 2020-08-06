@@ -34,6 +34,18 @@ export default Vue.extend({
       return (this as any).article.createdAt.substr(0, 10)
     },
   },
+  head() {
+    return {
+      title: (this as any).article.title,
+      meta: [
+        {
+          hid: 'slug_description',
+          name: 'slug_description',
+          content: (this as any).article.description,
+        },
+      ],
+    }
+  },
 })
 </script>
 
