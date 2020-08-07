@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@nuxt/content": "^1.5.0",
     "@nuxt/typescript-runtime": "^1.0.0",
     "@nuxtjs/google-analytics": "^2.4.0",
