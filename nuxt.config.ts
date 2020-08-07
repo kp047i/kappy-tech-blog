@@ -24,7 +24,7 @@ const config: Configuration = {
     htmlAttrs: {
       lang: 'ja',
     },
-    title: process.env.npm_package_name || 'kappy tech blog',
+    title: process.env.npm_package_name || 'kappy-tech-blog',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -33,7 +33,7 @@ const config: Configuration = {
         name: 'description',
         content:
           process.env.npm_package_description ||
-          '勉強した内容や得た知見をメモしたり共有するブログ',
+          '主にVue.jsやNuxt.js、電子工作について勉強した内容や得た知見をメモしたり共有するブログです。',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
