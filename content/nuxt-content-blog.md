@@ -1,9 +1,8 @@
 ---
 title: Nuxt/Contentでブログの作成
-description: Nuxt/Contentを利用してブログを作成した手順の紹介。
+description: Nuxt/Contentを利用してブログを作成した手順の紹介をします。Nuxt/Contentを利用することで手軽にブログやポートフォリオなどの静的サイトを作ることができます。このブログを利用して勉強した内容や知見などを共有できたらなと思います。
+tags: ['Nuxt.js', 'Nuxt/Content']
 ---
-
-Nuxt+Contentでブログを作成しましたこ。このブログで勉強した内容や知見などを共有できたらなと思います。
 
 ## Nuxt/Contentとは
 

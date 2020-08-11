@@ -1,10 +1,21 @@
 <template>
   <div class="flex flex-wrap relative">
     <div class="py-10 w-full lg:w-4/5">
-      <article class="content-article px-8 py-8">
+      <article class="content-article px-8 py-8 flex flex-col">
         <h1 class="content-article__title">{{ article.title }}</h1>
         <span>{{ convertDate }}</span>
-        <nuxt-content class="pt-8" :document="article" />
+        <div class="flex pt-2 items-center">
+          <fa :icon="faTags" class="text-copper" />
+          <span
+            v-for="tag in article.tags"
+            :key="tag"
+            class="ml-2 px-1 py-1 bg-grayF3"
+          >
+            {{ tag }}
+          </span>
+        </div>
+        <p class="py-4">{{ article.description }}</p>
+        <nuxt-content :document="article" />
       </article>
     </div>
     <div class="px-4 py-10 w-full lg:w-1/5">
@@ -18,6 +29,7 @@ import Vue from 'vue'
 import { Context } from '@nuxt/types'
 
 import AppToc from '@/components/AppToc.vue'
+import { faTags } from '@fortawesome/free-solid-svg-icons'
 
 export default Vue.extend({
   components: {
@@ -33,6 +45,7 @@ export default Vue.extend({
     convertDate(): string {
       return (this as any).article.createdAt.substr(0, 10)
     },
+    faTags: () => faTags,
   },
   head() {
     return {
