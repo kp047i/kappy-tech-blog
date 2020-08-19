@@ -2,10 +2,10 @@
   <client-only>
     <aside>
       <nav>
-        <scrollactive active-class="active" class="my-nav fixed">
+        <scrollactive active-class="active" class="my-nav fixed" offset="60">
           <ul>
             <li
-              v-for="link of article.toc"
+              v-for="link in article.toc"
               :key="link.id"
               :class="{ toc2: link.depth === 2, toc3: link.depth === 3 }"
               class="py-2"
