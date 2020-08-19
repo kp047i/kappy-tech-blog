@@ -90,4 +90,8 @@ h1.content-article__title {
 .nuxt-content a {
   color: #368ccb;
 }
+
+.nuxt-content-highlight {
+  padding-bottom: 16px;
+}
 </style>
