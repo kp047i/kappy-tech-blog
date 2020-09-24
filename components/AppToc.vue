@@ -2,7 +2,7 @@
   <client-only>
     <aside>
       <nav>
-        <scrollactive active-class="active" class="my-nav fixed" offset="60">
+        <scrollactive active-class="active" class="my-nav fixed" :offset="60">
           <ul>
             <li
               v-for="link in article.toc"
