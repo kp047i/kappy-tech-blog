@@ -70,28 +70,4 @@ export default Vue.extend({
 h1.content-article__title {
   font-size: 40px;
 }
-
-.nuxt-content h2 {
-  font-size: 1.6rem;
-  font-weight: 500;
-  padding: 16px 0;
-}
-
-.nuxt-content h3 {
-  font-size: 1.4rem;
-  font-weight: 500;
-  padding: 16px 0;
-}
-
-.nuxt-content p {
-  padding-bottom: 16px;
-}
-
-.nuxt-content a {
-  color: #368ccb;
-}
-
-.nuxt-content-highlight {
-  padding-bottom: 16px;
-}
 </style>
