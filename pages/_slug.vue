@@ -35,7 +35,7 @@ export default Vue.extend({
   components: {
     AppToc,
   },
-  async asyncData({ $content, params }: Context): Promise<object> {
+  async asyncData({ $content, params }: Context): Promise<Object> {
     const article = await $content(params.slug).fetch()
     return {
       article,
