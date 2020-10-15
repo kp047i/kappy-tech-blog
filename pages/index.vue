@@ -13,7 +13,7 @@ import Vue from 'vue'
 
 export default Vue.extend({
   async asyncData({ $content }) {
-    const articles = await $content().fetch()
+    const articles = await $content().sortBy('createdAt', 'desc').fetch()
     return {
       articles,
     }
