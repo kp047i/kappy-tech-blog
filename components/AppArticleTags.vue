@@ -1,0 +1,29 @@
+<template>
+  <div class="flex mt-4 items-center">
+    <fa :icon="faTags" class="text-copper" />
+    <span
+      v-for="tag in tags"
+      :key="tag"
+      class="ml-2 px-2 py-1 bg-grayF3 rounded"
+    >
+      {{ tag }}
+    </span>
+  </div>
+</template>
+
+<script lang="ts">
+import Vue from 'vue'
+
+import { faTags } from '@fortawesome/free-solid-svg-icons'
+export default Vue.extend({
+  props: {
+    tags: {
+      type: Array,
+      default: () => [],
+    },
+  },
+  computed: {
+    faTags: () => faTags,
+  },
+})
+</script>
