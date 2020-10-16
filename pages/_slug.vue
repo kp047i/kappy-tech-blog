@@ -3,9 +3,9 @@
     <div class="py-10 w-full lg:w-4/5">
       <article class="content-article px-8 py-8 flex flex-col">
         <h1 class="content-article__title">{{ article.title }}</h1>
-        <span>{{ convertDate }}</span>
+        <span class="mt-4">{{ convertDate }}</span>
         <AppArticleTags :tags="article.tags" />
-        <p class="py-4">{{ article.description }}</p>
+        <p class="mt-6 leading-7">{{ article.description }}</p>
         <nuxt-content :document="article" />
       </article>
     </div>
@@ -60,5 +60,6 @@ export default Vue.extend({
 
 h1.content-article__title {
   font-size: 40px;
+  word-break: break-all;
 }
 </style>
