@@ -2,10 +2,12 @@
   <div class="flex flex-wrap relative">
     <div class="py-10 w-full lg:w-4/5">
       <article class="content-article px-8 py-8 flex flex-col">
-        <h1 class="content-article__title">{{ article.title }}</h1>
-        <span class="mt-4">{{ convertDate }}</span>
+        <h1 class="content-article__title tracking-wider">
+          {{ article.title }}
+        </h1>
+        <span class="mt-4">{{ article.date.slice(0, 10) }}</span>
         <AppArticleTags :tags="article.tags" />
-        <p class="mt-6 leading-7">{{ article.description }}</p>
+        <p class="mt-6 leading-7 tracking-widest">{{ article.description }}</p>
         <nuxt-content :document="article" />
       </article>
     </div>
@@ -32,11 +34,6 @@ export default Vue.extend({
     return {
       article,
     }
-  },
-  computed: {
-    convertDate(): string {
-      return (this as any).article.createdAt.substr(0, 10)
-    },
   },
   head() {
     return {
