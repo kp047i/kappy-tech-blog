@@ -2,6 +2,8 @@
 title: Array.prototype.reduce()の使いどころやイメージのメモ
 description: 先日、とあるインターンに参加し取り組んだ課題の解答例にArray.prototype.reduce()を使っているものがありました。いまいちreduceの使い方を理解してなかったので質問したところ、その解答がすごくしっくりきたのでメモとして残します。
 tags: ['JavaScript']
+position: 4
+date: 2020-10-17
 ---
 
 ## Array.prototype.reduce()とは

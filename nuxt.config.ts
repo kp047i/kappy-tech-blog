@@ -1,4 +1,6 @@
 import { Configuration } from '@nuxt/types'
+require('dotenv').config()
+const { BASE_URL } = process.env
 
 const config: Configuration = {
   /*
@@ -24,7 +26,7 @@ const config: Configuration = {
     htmlAttrs: {
       lang: 'ja',
     },
-    title: process.env.npm_package_name || 'kappy-tech-blog',
+    title: 'kappy tech blog',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -35,6 +37,30 @@ const config: Configuration = {
           process.env.npm_package_description ||
           '主にVue.jsやNuxt.js、電子工作について勉強した内容や得た知見をメモしたり共有するブログです。',
       },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: 'kappy tech blog',
+      },
+      {
+        hid: 'og:type',
+        property: 'og:type',
+        content: 'website',
+      },
+      { hid: 'og:url', property: 'og:url', content: BASE_URL },
+      { hid: 'og:title', property: 'og:title', content: 'kappy tech blog' },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content:
+          '主にVue.jsやNuxt.js、電子工作について勉強した内容や得た知見をメモしたり共有するブログです。',
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: `${BASE_URL}/img/ogp/home.png`,
+      },
+      { name: 'twitter:card', content: 'summary_large_image' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -73,6 +99,9 @@ const config: Configuration = {
     '@nuxt/content',
     'nuxt-fontawesome',
   ],
+  env: {
+    BASE_URL,
+  },
   /*
    ** Content module configuration
    ** See https://content.nuxtjs.org/configuration
