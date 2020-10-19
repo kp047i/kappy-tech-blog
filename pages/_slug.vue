@@ -24,6 +24,17 @@ import { Context } from '@nuxt/types'
 import AppToc from '@/components/AppToc.vue'
 import AppArticleTags from '@/components/AppArticleTags.vue'
 
+export type MetaType = {
+  hid: string
+  property: string
+  content: string
+}
+
+export type HeadType = {
+  title: string
+  meta: MetaType[]
+}
+
 export default Vue.extend({
   components: {
     AppToc,
@@ -35,14 +46,30 @@ export default Vue.extend({
       article,
     }
   },
-  head() {
+  head(): HeadType {
     return {
       title: (this as any).article.title,
       meta: [
         {
           hid: 'slug_description',
-          name: 'slug_description',
+          property: 'slug_description',
           content: (this as any).article.description,
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: `${process.env.BASE_URL}${this.$route.path}`,
+        },
+        { hid: 'og:title', property: 'og:title', content: 'kappy tech blog' },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: (this as any).article.description,
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: `${process.env.BASE_URL}/img/ogp${this.$route.path}.png`,
         },
       ],
     }
