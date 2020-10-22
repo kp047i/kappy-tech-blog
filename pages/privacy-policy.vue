@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-wrap relative">
-    <div class="content my-10 w-full">
+    <div class="content my-10 w-full shadow">
       <article class="content-article px-8 py-8 flex flex-col">
         <h1 class="content-article__title tracking-wider">
           {{ article.title }}
