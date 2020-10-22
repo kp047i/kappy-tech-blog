@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-wrap relative">
-    <div class="py-10 w-full lg:w-4/5">
+    <div class="content my-10 w-full lg:w-4/5">
       <article class="content-article px-8 py-8 flex flex-col">
         <h1 class="content-article__title tracking-wider">
           {{ article.title }}
@@ -76,14 +76,3 @@ export default Vue.extend({
   },
 })
 </script>
-
-<style>
-.content-article {
-  background-color: #fafafa;
-}
-
-h1.content-article__title {
-  font-size: 40px;
-  word-break: break-all;
-}
-</style>
