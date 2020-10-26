@@ -1,20 +1,26 @@
 <template>
-  <div class="flex flex-wrap relative">
-    <div class="content my-10 w-full lg:w-4/5 shadow">
-      <article class="content-article px-8 py-8 flex flex-col">
-        <h1 class="content-article__title tracking-wider">
-          {{ article.title }}
-        </h1>
-        <span class="mt-4">{{ article.date.slice(0, 10) }}</span>
-        <AppArticleTags :tags="article.tags" />
-        <p class="mt-6 leading-7 tracking-widest">{{ article.description }}</p>
-        <nuxt-content :document="article" />
-      </article>
+  <main class="flex-grow px-8 container container-article mx-auto pt-16">
+    <div class="flex flex-wrap relative">
+      <div class="content my-10 w-full lg:w-3/4 shadow">
+        <article class="content-article px-8 py-8 flex flex-col">
+          <section>
+            <h1 class="content-article__title tracking-wider">
+              {{ article.title }}
+            </h1>
+            <span class="mt-4">{{ article.date.slice(0, 10) }}</span>
+            <AppArticleTags :tags="article.tags" />
+            <p class="mt-6 leading-7 tracking-widest">
+              {{ article.description }}
+            </p>
+          </section>
+          <nuxt-content :document="article" />
+        </article>
+      </div>
+      <div class="px-6 py-10 w-full lg:w-1/4">
+        <AppToc :article="article" />
+      </div>
     </div>
-    <div class="px-4 py-10 w-full lg:w-1/5">
-      <AppToc :article="article" />
-    </div>
-  </div>
+  </main>
 </template>
 
 <script lang="ts">
@@ -76,3 +82,9 @@ export default Vue.extend({
   },
 })
 </script>
+
+<style scoped>
+.container-article {
+  max-width: 960px;
+}
+</style>
