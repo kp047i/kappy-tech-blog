@@ -1,14 +1,16 @@
 <template>
-  <div class="flex flex-wrap relative">
-    <div class="content my-10 w-full shadow">
-      <article class="content-article px-8 py-8 flex flex-col">
-        <h1 class="content-article__title tracking-wider">
-          {{ article.title }}
-        </h1>
-        <nuxt-content :document="article" />
-      </article>
+  <main class="flex-grow px-8 container mx-auto pt-16">
+    <div class="flex flex-wrap relative">
+      <div class="content my-10 w-full shadow">
+        <article class="content-article px-8 py-8 flex flex-col">
+          <h1 class="content-article__title tracking-wider">
+            {{ article.title }}
+          </h1>
+          <nuxt-content :document="article" />
+        </article>
+      </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script lang="ts">
