@@ -15,6 +15,7 @@ module.exports = {
         latte: '#FEF6E3',
         // banana: '#FDEBC2',
         copper: '#D66853',
+        navy: '#212D40',
       },
     },
     container: {
