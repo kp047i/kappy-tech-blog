@@ -7,7 +7,10 @@
             <h1 class="content-article__title tracking-wider">
               {{ article.title }}
             </h1>
-            <span class="mt-4">{{ article.date.slice(0, 10) }}</span>
+            <div class="flex items-center mt-4">
+              <span class="mr-4">{{ article.date.slice(0, 10) }}</span>
+              <ShareButton />
+            </div>
             <AppArticleTags :tags="article.tags" />
             <p class="mt-6 leading-7 tracking-widest">
               {{ article.description }}
@@ -29,22 +32,24 @@ import { Context } from '@nuxt/types'
 
 import AppToc from '@/components/AppToc.vue'
 import AppArticleTags from '@/components/AppArticleTags.vue'
+import ShareButton from '@/components/ShareButton.vue'
 
-export type MetaType = {
-  hid: string
-  property: string
-  content: string
-}
+// export type MetaType = {
+//   hid: string
+//   property: string
+//   content: string
+// }
 
-export type HeadType = {
-  title: string
-  meta: MetaType[]
-}
+// export type HeadType = {
+//   title: string
+//   meta: MetaType[]
+// }
 
 export default Vue.extend({
   components: {
     AppToc,
     AppArticleTags,
+    ShareButton,
   },
   async asyncData({ $content, params }: Context): Promise<Object> {
     const article = await $content(params.slug).fetch()
@@ -52,13 +57,13 @@ export default Vue.extend({
       article,
     }
   },
-  head(): HeadType {
+  head() {
     return {
       title: (this as any).article.title,
       meta: [
         {
           hid: 'slug_description',
-          property: 'slug_description',
+          name: 'slug_description',
           content: (this as any).article.description,
         },
         {
@@ -75,6 +80,21 @@ export default Vue.extend({
         {
           hid: 'og:image',
           property: 'og:image',
+          content: `${process.env.BASE_URL}/img/ogp${this.$route.path}.png`,
+        },
+        {
+          hid: 'twitter:card',
+          property: 'twitter:card',
+          content: 'summary_large_image',
+        },
+        {
+          hid: 'twitter:site',
+          property: 'twitter:site',
+          content: `${process.env.BASE_URL}${this.$route.path}`,
+        },
+        {
+          hid: 'twitter:image',
+          property: 'twitter:image',
           content: `${process.env.BASE_URL}/img/ogp${this.$route.path}.png`,
         },
       ],
