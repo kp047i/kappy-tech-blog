@@ -19,7 +19,8 @@
     "nuxt": "^2.14.0",
     "nuxt-fontawesome": "^0.4.0",
     "prism-themes": "^1.4.0",
-    "vue-scrollactive": "^0.9.3"
+    "vue-scrollactive": "^0.9.3",
+    "vue-social-sharing": "^3.0.3"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.0",
