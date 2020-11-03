@@ -92,17 +92,17 @@ export default Vue.extend({
         },
         {
           hid: 'twitter:card',
-          property: 'twitter:card',
+          name: 'twitter:card',
           content: 'summary_large_image',
         },
         {
           hid: 'twitter:site',
-          property: 'twitter:site',
+          name: 'twitter:site',
           content: `${process.env.BASE_URL}${this.$route.path}`,
         },
         {
           hid: 'twitter:image',
-          property: 'twitter:image',
+          name: 'twitter:image',
           content: `${process.env.BASE_URL}/img/ogp${this.$route.path}.png`,
         },
       ],
