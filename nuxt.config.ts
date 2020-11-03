@@ -98,6 +98,7 @@ const config: Configuration = {
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
     'nuxt-fontawesome',
+    'vue-social-sharing/nuxt',
   ],
   env: {
     BASE_URL,

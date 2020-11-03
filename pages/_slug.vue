@@ -9,7 +9,10 @@
             </h1>
             <div class="flex items-center mt-4">
               <span class="mr-4">{{ article.date.slice(0, 10) }}</span>
-              <ShareButton />
+              <ShareButton
+                :url="`${baseUrl}${this.$route.path}`"
+                :title="article.title"
+              />
             </div>
             <AppArticleTags :tags="article.tags" />
             <p class="mt-6 leading-7 tracking-widest">
@@ -55,6 +58,11 @@ export default Vue.extend({
     const article = await $content(params.slug).fetch()
     return {
       article,
+    }
+  },
+  data() {
+    return {
+      baseUrl: process.env.BASE_URL,
     }
   },
   head() {
