@@ -88,7 +88,7 @@ export default Vue.extend({
         {
           hid: 'og:image',
           property: 'og:image',
-          content: `${process.env.BASE_URL}/img/ogp${this.$route.path}.png`,
+          content: `${process.env.BASE_URL}img/ogp${this.$route.path}.png`,
         },
         {
           hid: 'twitter:card',
@@ -103,7 +103,7 @@ export default Vue.extend({
         {
           hid: 'twitter:image',
           name: 'twitter:image',
-          content: `${process.env.BASE_URL}/img/ogp${this.$route.path}.png`,
+          content: `${process.env.BASE_URL}img/ogp${this.$route.path}.png`,
         },
       ],
     }
