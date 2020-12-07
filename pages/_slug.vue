@@ -98,7 +98,7 @@ export default Vue.extend({
         {
           hid: 'twitter:site',
           name: 'twitter:site',
-          content: `${process.env.BASE_URL}${this.$route.path}`,
+          content: `${process.env.BASE_URL?.slice(0, -1)}${this.$route.path}`,
         },
         {
           hid: 'twitter:image',
