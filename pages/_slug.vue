@@ -77,7 +77,7 @@ export default Vue.extend({
         {
           hid: 'og:url',
           property: 'og:url',
-          content: `${process.env.BASE_URL}${this.$route.path}`,
+          content: `${process.env.BASE_URL?.slice(0, -1)}${this.$route.path}`,
         },
         { hid: 'og:title', property: 'og:title', content: 'kappy tech blog' },
         {
