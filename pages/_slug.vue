@@ -37,6 +37,10 @@ import AppToc from '@/components/AppToc.vue'
 import AppArticleTags from '@/components/AppArticleTags.vue'
 import ShareButton from '@/components/ShareButton.vue'
 
+type DataType = {
+  baseUrl?: string
+}
+
 // export type MetaType = {
 //   hid: string
 //   property: string
@@ -60,7 +64,7 @@ export default Vue.extend({
       article,
     }
   },
-  data() {
+  data(): DataType {
     return {
       baseUrl: process.env.BASE_URL,
     }
