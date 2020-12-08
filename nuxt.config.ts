@@ -1,8 +1,7 @@
-import { Configuration } from '@nuxt/types'
 require('dotenv').config()
 const { BASE_URL } = process.env
 
-const config: Configuration = {
+const config = {
   /*
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
@@ -58,7 +57,7 @@ const config: Configuration = {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: `${BASE_URL}/img/ogp/home.png`,
+        content: `${BASE_URL}img/ogp/home.png`,
       },
       { name: 'twitter:card', content: 'summary_large_image' },
     ],

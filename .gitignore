@@ -88,3 +88,6 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# google-site-verification
+static/google642f6eca75cc2607.html
