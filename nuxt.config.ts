@@ -1,5 +1,5 @@
 require('dotenv').config()
-const { BASE_URL } = process.env
+const { BASE_HOST } = process.env
 
 const config = {
   /*
@@ -46,7 +46,7 @@ const config = {
         property: 'og:type',
         content: 'website',
       },
-      { hid: 'og:url', property: 'og:url', content: BASE_URL },
+      { hid: 'og:url', property: 'og:url', content: BASE_HOST },
       { hid: 'og:title', property: 'og:title', content: 'kappy tech blog' },
       {
         hid: 'og:description',
@@ -57,7 +57,7 @@ const config = {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: `${BASE_URL}img/ogp/home.png`,
+        content: `${BASE_HOST}/img/ogp/home.png`,
       },
       { name: 'twitter:card', content: 'summary_large_image' },
     ],
@@ -100,7 +100,7 @@ const config = {
     'vue-social-sharing/nuxt',
   ],
   env: {
-    BASE_URL,
+    BASE_HOST,
   },
   /*
    ** Content module configuration

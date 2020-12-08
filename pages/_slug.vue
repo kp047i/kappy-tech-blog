@@ -10,7 +10,7 @@
             <div class="flex items-center mt-4">
               <span class="mr-4">{{ article.date.slice(0, 10) }}</span>
               <ShareButton
-                :url="`${baseUrl}${this.$route.path}`"
+                :url="`${baseHost}${this.$route.path}`"
                 :title="article.title"
               />
             </div>
@@ -38,7 +38,7 @@ import AppArticleTags from '@/components/AppArticleTags.vue'
 import ShareButton from '@/components/ShareButton.vue'
 
 type DataType = {
-  baseUrl?: string
+  baseHost?: string
 }
 
 // export type MetaType = {
@@ -66,7 +66,7 @@ export default Vue.extend({
   },
   data(): DataType {
     return {
-      baseUrl: process.env.BASE_URL,
+      baseHost: process.env.BASE_HOST,
     }
   },
   head() {
@@ -81,7 +81,7 @@ export default Vue.extend({
         {
           hid: 'og:url',
           property: 'og:url',
-          content: `${process.env.BASE_URL?.slice(0, -1)}${this.$route.path}`,
+          content: `${process.env.BASE_HOST}${this.$route.path}`,
         },
         { hid: 'og:title', property: 'og:title', content: 'kappy tech blog' },
         {
@@ -92,7 +92,7 @@ export default Vue.extend({
         {
           hid: 'og:image',
           property: 'og:image',
-          content: `${process.env.BASE_URL}img/ogp${this.$route.path}.png`,
+          content: `${process.env.BASE_HOST}/img/ogp${this.$route.path}.png`,
         },
         {
           hid: 'twitter:card',
@@ -102,12 +102,12 @@ export default Vue.extend({
         {
           hid: 'twitter:site',
           name: 'twitter:site',
-          content: `${process.env.BASE_URL?.slice(0, -1)}${this.$route.path}`,
+          content: `${process.env.BASE_HOST}${this.$route.path}`,
         },
         {
           hid: 'twitter:image',
           name: 'twitter:image',
-          content: `${process.env.BASE_URL}img/ogp${this.$route.path}.png`,
+          content: `${process.env.BASE_HOST}/img/ogp${this.$route.path}.png`,
         },
       ],
     }
