@@ -1,5 +1,5 @@
 require('dotenv').config()
-const { BASE_HOST } = process.env
+const BASE_HOST = process.env.BASE_HOST || 'http://localhost'
 
 const config = {
   /*
