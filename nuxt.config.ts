@@ -1,5 +1,6 @@
 require('dotenv').config()
 const BASE_HOST = process.env.BASE_HOST || 'http://localhost'
+const BASE_URL = BASE_HOST + '/'
 
 const config = {
   /*
@@ -46,7 +47,7 @@ const config = {
         property: 'og:type',
         content: 'website',
       },
-      { hid: 'og:url', property: 'og:url', content: BASE_HOST },
+      { hid: 'og:url', property: 'og:url', content: BASE_URL },
       { hid: 'og:title', property: 'og:title', content: 'kappy tech blog' },
       {
         hid: 'og:description',
