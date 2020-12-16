@@ -1,29 +1,9 @@
 <template>
   <main class="flex-grow px-8 container container-article mx-auto pt-16">
     <div class="flex flex-wrap relative">
-      <div class="content my-10 w-full lg:w-3/4 shadow">
-        <article class="content-article px-8 py-8 flex flex-col">
-          <section>
-            <h1 class="content-article__title tracking-wider">
-              {{ article.title }}
-            </h1>
-            <div class="flex items-center mt-4">
-              <span class="mr-4">{{ article.date.slice(0, 10) }}</span>
-              <ShareButton
-                :url="`${baseHost}${this.$route.path}`"
-                :title="article.title"
-              />
-            </div>
-            <AppArticleTags :tags="article.tags" />
-            <p class="mt-6 leading-7 tracking-widest">
-              {{ article.description }}
-            </p>
-          </section>
-          <nuxt-content :document="article" />
-        </article>
-      </div>
+      <AppArticle :article="article" />
       <div class="px-6 py-10 w-full lg:w-1/4">
-        <AppToc :article="article" />
+        <AppArticleToc :article="article" />
       </div>
     </div>
   </main>
@@ -34,9 +14,8 @@ import Vue from 'vue'
 import { IContentDocument } from '@nuxt/content/types/content'
 import { Context } from '@nuxt/types'
 
-import AppToc from '@/components/AppToc.vue'
-import AppArticleTags from '@/components/AppArticleTags.vue'
-import ShareButton from '@/components/ShareButton.vue'
+import AppArticle from '@/components/organisms/AppArticle.vue'
+import AppArticleToc from '@/components/organisms/AppArticleToc.vue'
 
 type DataType = {
   baseHost?: string
@@ -53,15 +32,14 @@ type DataType = {
 //   meta: MetaType[]
 // }
 
-type AsyncDataType = {
+interface AsyncDataType {
   article: IContentDocument | IContentDocument[]
 }
 
 export default Vue.extend({
   components: {
-    AppToc,
-    AppArticleTags,
-    ShareButton,
+    AppArticle,
+    AppArticleToc,
   },
   async asyncData({ $content, params }: Context): Promise<AsyncDataType> {
     const article = await $content(params.slug).fetch()

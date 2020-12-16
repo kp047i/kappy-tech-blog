@@ -10,11 +10,7 @@
               :class="{ toc2: link.depth === 2, toc3: link.depth === 3 }"
               class="py-2"
             >
-              <NuxtLink
-                :to="`#${link.id}`"
-                class="scrollactive-item hover:text-copper"
-                >{{ link.text }}</NuxtLink
-              >
+              <TocLink :id="link.id" :text="link.text" />
             </li>
           </ul>
         </scrollactive>
@@ -25,14 +21,19 @@
 
 <script lang="ts">
 import Vue, { PropOptions } from 'vue'
-import { IContentDocument } from '@nuxt/content/types/content'
+
+import TocLink from '@/components/atoms/TocLink.vue'
+import { IArticle } from '@/types/article'
 
 export default Vue.extend({
+  components: {
+    TocLink,
+  },
   props: {
     article: {
       type: Object,
       default: null,
-    } as PropOptions<IContentDocument | IContentDocument[]>,
+    } as PropOptions<IArticle | IArticle[]>,
   },
 })
 </script>

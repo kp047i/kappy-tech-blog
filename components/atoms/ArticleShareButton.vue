@@ -1,6 +1,10 @@
 <template>
   <div class="cursor-pointer">
-    <ShareNetwork network="twitter" :url="url" :title="title">
+    <ShareNetwork
+      network="twitter"
+      :url="articleLink.url"
+      :title="articleLink.title"
+    >
       <div
         class="flex items-center bg-twitter text-white text-xs rounded-sm px-2 py-1"
       >
@@ -12,20 +16,23 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue, { PropOptions } from 'vue'
 
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 
+interface IProps {
+  articleLink: {
+    url: string
+    title: string
+  }
+}
+
 export default Vue.extend({
   props: {
-    url: {
-      type: String,
-      default: '',
-    },
-    title: {
-      type: String,
-      default: '',
-    },
+    articleLink: {
+      type: Object,
+      default: null,
+    } as PropOptions<IProps>,
   },
   computed: {
     faTwitter: () => faTwitter,

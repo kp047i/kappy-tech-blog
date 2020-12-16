@@ -7,7 +7,7 @@
         class="p-4 md:w-1/2 lg:w-1/3"
       >
         <nuxt-link :to="article.slug">
-          <ArticleCard :article="article" />
+          <!-- <ArticleCard :article="article" /> -->
         </nuxt-link>
       </div>
     </div>
@@ -16,12 +16,12 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import ArticleCard from '@/components/ArticleCard.vue'
+// import ArticleCard from '@/components/ArticleCard.vue'
 
 export default Vue.extend({
-  components: {
-    ArticleCard,
-  },
+  // components: {
+  //   ArticleCard,
+  // },
   async asyncData({ $content }) {
     const articles = await $content()
       .where({ slug: { $ne: 'privacy-policy' } })

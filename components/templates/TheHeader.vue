@@ -4,7 +4,7 @@
       <nuxt-link to="/">
         <div class="text-2xl text-latte">kappy tech blog</div>
       </nuxt-link>
-      <div class="flex items-center justify-start">
+      <!-- <div class="flex items-center justify-start">
         <a href="https://twitter.com/kp047i" class="mr-3 fa-lg text-latte">
           <AppSocialButton>
             <fa :icon="faTwitter" />
@@ -18,21 +18,21 @@
             <fa :icon="faGithub" />
           </AppSocialButton>
         </a>
-      </div>
+      </div> -->
     </div>
   </header>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import AppSocialButton from '@/components/AppSocialButton.vue'
+// import AppSocialButton from '@/components/atoms/AppSocialButton.vue'
 
 import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 export default Vue.extend({
-  components: {
-    AppSocialButton,
-  },
+  // components: {
+  //   AppSocialButton,
+  // },
   computed: {
     faTwitter: () => faTwitter,
     faGithub: () => faGithub,
