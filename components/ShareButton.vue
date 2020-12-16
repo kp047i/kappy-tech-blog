@@ -15,6 +15,7 @@
 import Vue from 'vue'
 
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+
 export default Vue.extend({
   props: {
     url: {

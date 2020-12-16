@@ -18,13 +18,15 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue, { PropOptions } from 'vue'
+import { IContentDocument } from '@nuxt/content/types/content'
+
 export default Vue.extend({
   props: {
     article: {
       type: Object,
       default: null,
-    },
+    } as PropOptions<IContentDocument | IContentDocument[]>,
   },
 })
 </script>

@@ -31,6 +31,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { IContentDocument } from '@nuxt/content/types/content'
 import { Context } from '@nuxt/types'
 
 import AppToc from '@/components/AppToc.vue'
@@ -41,16 +42,20 @@ type DataType = {
   baseHost?: string
 }
 
-// export type MetaType = {
+// type MetaType = {
 //   hid: string
 //   property: string
 //   content: string
 // }
 
-// export type HeadType = {
+// type HeadType = {
 //   title: string
 //   meta: MetaType[]
 // }
+
+type AsyncDataType = {
+  article: IContentDocument | IContentDocument[]
+}
 
 export default Vue.extend({
   components: {
@@ -58,7 +63,7 @@ export default Vue.extend({
     AppArticleTags,
     ShareButton,
   },
-  async asyncData({ $content, params }: Context): Promise<Object> {
+  async asyncData({ $content, params }: Context): Promise<AsyncDataType> {
     const article = await $content(params.slug).fetch()
     return {
       article,
