@@ -2,10 +2,11 @@
   <section>
     <ArticleTitle :title="article.title" />
     <div class="flex items-center mt-4">
-      <ArticleDate :date="article.date" />
+      <ArticleDate :updated-at="article.updatedAt" />
       <ArticleShareButton :article-link="articleLink" />
     </div>
     <ArticleTags :tags="article.tags" />
+    <ArticleThumbnail :slug="article.slug" />
     <ArticleDescription :description="article.description" />
   </section>
 </template>
@@ -18,9 +19,10 @@ import ArticleTitle from '@/components/atoms/ArticleTitle.vue'
 import ArticleDate from '@/components/atoms/ArticleDate.vue'
 import ArticleTags from '@/components/atoms/ArticleTags.vue'
 import ArticleShareButton from '@/components/atoms/ArticleShareButton.vue'
+import ArticleThumbnail from '@/components/atoms/ArticleThumbnail.vue'
 import ArticleDescription from '@/components/atoms/ArticleDescription.vue'
 
-type DataType = {
+interface DataType {
   articleLink: {
     title: string
     url: string
@@ -49,6 +51,7 @@ export default Vue.extend({
     ArticleDate,
     ArticleTags,
     ArticleShareButton,
+    ArticleThumbnail,
     ArticleDescription,
   },
   props: {

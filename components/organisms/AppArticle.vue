@@ -14,7 +14,7 @@ import { IArticle } from '@/types/article'
 import ArticleHeader from '@/components/molecules/ArticleHeader.vue'
 
 interface PropsType {
-  article: IArticle | IArticle[]
+  article: IArticle
 }
 
 export default Vue.extend({
