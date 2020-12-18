@@ -1,5 +1,5 @@
 <template>
-  <p class="mt-6 leading-7 tracking-widest">
+  <p class="my-8 md:my-10">
     {{ description }}
   </p>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <div class="py-8">
+  <div class="mt-4 md:mt-6">
     <picture>
       <source :srcset="`/img/ogp/${slug}.webp`" type="image/webp" />
       <img :src="`/img/ogp/${slug}.png`" :alt="`${slug} thumbnail`" />

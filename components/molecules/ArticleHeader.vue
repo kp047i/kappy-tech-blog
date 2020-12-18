@@ -1,7 +1,7 @@
 <template>
   <section>
     <ArticleTitle :title="article.title" />
-    <div class="flex items-center mt-4">
+    <div class="flex items-center mt-4 md:mt-6">
       <ArticleDate :updated-at="article.updatedAt" />
       <ArticleShareButton :article-link="articleLink" />
     </div>

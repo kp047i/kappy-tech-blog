@@ -1,5 +1,5 @@
 <template>
-  <h1 class="content-article__title tracking-wider">
+  <h1 class="font-bold text-2xl break-all">
     {{ title }}
   </h1>
 </template>

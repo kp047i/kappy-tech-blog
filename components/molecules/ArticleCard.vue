@@ -10,9 +10,9 @@
       <h2 class="title-font text-xl font-medium text-navy my-3">
         {{ article.title }}
       </h2>
-      <p class="leading-7 mb-3 text-gray-700">
+      <!-- <p class="leading-7 mb-3 text-gray-700">
         {{ article.description }}
-      </p>
+      </p> -->
     </div>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="`#${id}`" class="scrollactive-item hover:text-copper">{{
+  <NuxtLink :to="`#${id}`" class="scrollactive-item break-all">{{
     text
   }}</NuxtLink>
 </template>

@@ -1,8 +1,14 @@
 <template>
-  <div class="content my-10 w-full lg:w-3/4 shadow">
-    <article class="max-w-screen-md px-8 py-8 flex flex-col">
-      <ArticleHeader :article="article" />
-      <nuxt-content :document="article" />
+  <div class="content w-full shadow rounded-lg lg:w-3/5">
+    <article class="flex flex-col p-4 md:p-8">
+      <ArticleHeader
+        :article="article"
+        class="tracking-wider leading-relaxed"
+      />
+      <nuxt-content
+        :document="article"
+        class="tracking-wider leading-relaxed"
+      />
     </article>
   </div>
 </template>

@@ -1,22 +1,24 @@
-.nuxt-content {
-  letter-spacing: 0.1em;
-}
-
 .nuxt-content h2 {
-  font-size: 1.6rem;
+  @apply font-bold text-xl mb-2;
+  /* font-size: 1.6rem;
   font-weight: 500;
-  padding: 16px 0;
+  padding: 16px 0; */
 }
 
 .nuxt-content h3 {
-  font-size: 1.4rem;
+  @apply font-bold text-lg mt-6;
+  /* font-size: 1.4rem;
   font-weight: 500;
-  padding: 16px 0;
+  padding: 16px 0; */
 }
 
 .nuxt-content p {
-  margin-bottom: 32px;
-  line-height: 1.75rem;
+  @apply my-8;
+  @media (min-width: 768px) {
+    @apply my-10;
+  }
+  /* margin-bottom: 32px;
+  line-height: 1.75rem; */
 }
 
 .nuxt-content a {
@@ -24,13 +26,11 @@
 }
 
 .nuxt-content blockquote {
-  background: #f5f5f5;
+  @apply shadow-md bg-grayF3 italic pl-5 py-4 pr-3;
   border-left: 4px solid #d66853;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14);
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14); */
   color: #777;
-  font-style: italic;
-  margin-bottom: 24px;
-  padding: 35px 15px 10px 15px;
+  /* padding: 35px 15px 10px 15px; */
 }
 
 .nuxt-content-highlight {
