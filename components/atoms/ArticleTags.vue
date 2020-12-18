@@ -1,5 +1,5 @@
 <template>
-  <div class="flex mt-4 items-center">
+  <div class="flex items-center mt-4 md:mt-6">
     <fa :icon="faTags" class="text-copper" />
     <span
       v-for="tag in tags"

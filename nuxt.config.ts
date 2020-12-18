@@ -97,6 +97,7 @@ const config = {
   modules: [
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
+    '@nuxt/image',
     'nuxt-fontawesome',
     'vue-social-sharing/nuxt',
   ],
