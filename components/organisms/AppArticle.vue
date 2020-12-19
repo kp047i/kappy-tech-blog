@@ -1,5 +1,5 @@
 <template>
-  <div class="content w-full shadow rounded-lg lg:w-3/5">
+  <div class="content w-full shadow rounded-lg lg:w-3/5 mt-4">
     <article class="flex flex-col p-4 md:p-8">
       <ArticleHeader
         :article="article"

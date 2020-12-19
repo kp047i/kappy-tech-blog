@@ -2,9 +2,9 @@
   <main
     class="flex-grow container mx-auto max-w-screen-xl lg:static px-4 md:px-12 pt-16"
   >
-    <div class="flex flex-wrap py-4 md:py-8">
+    <div class="flex flex-wrap mb-4 md:py-8">
       <AppArticle :article="article" />
-      <div class="w-full lg:w-2/5 lg:px-10">
+      <div class="w-full lg:w-2/5 lg:px-10 mt-4">
         <AppArticleToc :article="article" />
       </div>
       <!-- <div class="px-6 py-10 w-full lg:w-1/4">
