@@ -64,7 +64,7 @@ export default Vue.extend({
     return {
       articleLink: {
         title: this.article.title,
-        url: `${process.env.BASE_HOST}${this.$route.path}`,
+        url: `${process.env.BASE_HOST}${this.$route.path}/`,
       },
     }
   },

@@ -7,13 +7,13 @@
         <div class="text-lg md:text-2xl text-latte">kappy tech blog</div>
       </nuxt-link>
       <div class="flex items-center justify-start">
-        <a href="https://twitter.com/kp047i" class="md:mr-4 fa-lg text-latte">
+        <a href="https://twitter.com/kp047i/" class="md:mr-4 fa-lg text-latte">
           <AppSocialButton>
             <fa :icon="faTwitter" />
           </AppSocialButton>
         </a>
         <a
-          href="https://github.com/kp047i/kappy-tech-blog"
+          href="https://github.com/kp047i/kappy-tech-blog/"
           class="fa-lg text-latte"
         >
           <AppSocialButton>

@@ -4,18 +4,10 @@ import { IContentDocument } from '@nuxt/content/types/content'
 require('dotenv').config()
 const BASE_HOST = process.env.BASE_HOST || 'http://localhost'
 const BASE_URL = BASE_HOST + '/'
+const BASE_OGP = BASE_URL + 'img/ogp/'
 
 const config = {
-  /*
-   ** Nuxt rendering mode
-   ** See https://nuxtjs.org/api/configuration-mode
-   */
-  // mode: 'universal',
   ssr: true,
-  /*
-   ** Nuxt target
-   ** See https://nuxtjs.org/api/configuration-target
-   */
   target: 'static',
   /*
    ** Src directory
@@ -61,7 +53,7 @@ const config = {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: `${BASE_HOST}/img/ogp/home.png`,
+        content: `${BASE_OGP}home.png`,
       },
       { name: 'twitter:card', content: 'summary_large_image' },
     ],
@@ -107,6 +99,7 @@ const config = {
   ],
   env: {
     BASE_HOST,
+    BASE_OGP,
   },
   /*
    ** Content module configuration
@@ -135,7 +128,7 @@ const config = {
       }
       const articles: IContentDocument[] = await $content('').fetch()
       articles.forEach((article) => {
-        const url = `${BASE_URL}${article.slug}`
+        const url = `${BASE_URL}${article.slug}/`
         feed.addItem({
           title: article.title,
           id: url,

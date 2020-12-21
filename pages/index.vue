@@ -10,7 +10,7 @@
         :key="article.title"
         class="md:w-1/2 xl:w-1/3 p-2 md:p-4 lg:px-10 xl:px-4 mb-2"
       >
-        <nuxt-link :to="article.slug">
+        <nuxt-link :to="`${article.slug}/`">
           <ArticleCard :article="article" />
         </nuxt-link>
       </div>
