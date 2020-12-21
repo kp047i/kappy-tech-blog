@@ -19,7 +19,7 @@ export default Vue.extend({
   computed: {
     faHistory: () => faHistory,
     updatedDate() {
-      return this.updatedAt.slice(0, 10)
+      return this.updatedAt.slice(0, 10).replace(/-/g, '/')
     },
   },
 })

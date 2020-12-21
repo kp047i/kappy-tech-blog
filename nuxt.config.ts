@@ -1,3 +1,6 @@
+// const OGP_URL = BASE_URL + 'ogp/'
+
+import { IContentDocument } from '@nuxt/content/types/content'
 require('dotenv').config()
 const BASE_HOST = process.env.BASE_HOST || 'http://localhost'
 const BASE_URL = BASE_HOST + '/'
@@ -98,6 +101,7 @@ const config = {
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
     '@nuxt/image',
+    '@nuxtjs/feed',
     'nuxt-fontawesome',
     'vue-social-sharing/nuxt',
   ],
@@ -114,6 +118,40 @@ const config = {
         theme: 'prism-themes/themes/prism-material-oceanic.css',
       },
     },
+  },
+  feed() {
+    const feedFormats = {
+      rss: { type: 'rss2', file: 'rss.xml' },
+      atom: { type: 'atom1', file: 'atom.xml' },
+      json: { type: 'json1', file: 'feed.json' },
+    }
+    const { $content } = require('@nuxt/content')
+    const createFeedArticles = async function (feed: any) {
+      feed.options = {
+        title: 'kappy tech blog',
+        description:
+          '主にVue.jsやNuxt.js、電子工作について勉強した内容や得た知見をメモしたり共有するブログです。',
+        link: BASE_URL,
+      }
+      const articles: IContentDocument[] = await $content('').fetch()
+      articles.forEach((article) => {
+        const url = `${BASE_URL}${article.slug}`
+        feed.addItem({
+          title: article.title,
+          id: url,
+          link: url,
+          date: new Date(article.createdAt),
+          description: article.description,
+          content: article.description,
+          author: 'kp047i',
+        })
+      })
+    }
+    return Object.values(feedFormats).map(({ file, type }) => ({
+      path: `${file}`,
+      type,
+      create: createFeedArticles,
+    }))
   },
   fontawesome: {
     component: 'fa',
