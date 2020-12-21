@@ -24,6 +24,7 @@ import AppArticleToc from '@/components/organisms/AppArticleToc.vue'
 
 type DataType = {
   baseHost?: string
+  baseOgp?: string
 }
 
 // type MetaType = {
@@ -55,6 +56,7 @@ export default Vue.extend({
   data(): DataType {
     return {
       baseHost: process.env.BASE_HOST,
+      baseOgp: process.env.BASE_OGP,
     }
   },
   head() {
@@ -69,7 +71,7 @@ export default Vue.extend({
         {
           hid: 'og:url',
           property: 'og:url',
-          content: `${process.env.BASE_HOST}${this.$route.path}`,
+          content: `${process.env.BASE_HOST}${this.$route.path}/`,
         },
         { hid: 'og:title', property: 'og:title', content: 'kappy tech blog' },
         {
@@ -80,7 +82,7 @@ export default Vue.extend({
         {
           hid: 'og:image',
           property: 'og:image',
-          content: `${process.env.BASE_HOST}/img/ogp${this.$route.path}.png`,
+          content: `${process.env.BASE_OGP}${this.$route.path}.png`,
         },
         {
           hid: 'twitter:card',
@@ -90,12 +92,12 @@ export default Vue.extend({
         {
           hid: 'twitter:site',
           name: 'twitter:site',
-          content: `${process.env.BASE_HOST}${this.$route.path}`,
+          content: `${process.env.BASE_HOST}${this.$route.path}/`,
         },
         {
           hid: 'twitter:image',
           name: 'twitter:image',
-          content: `${process.env.BASE_HOST}/img/ogp${this.$route.path}.png`,
+          content: `${process.env.BASE_OGP}${this.$route.path}.png`,
         },
       ],
     }
