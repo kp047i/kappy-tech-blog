@@ -32,7 +32,7 @@ interface IToc {
 
 interface IArticle extends IContentDocument {
   body: Object
-  date: Date
+  date: string
   description: string
   position: number
   tags: string[]
