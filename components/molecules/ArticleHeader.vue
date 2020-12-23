@@ -6,7 +6,7 @@
       <ArticleShareButton :article-link="articleLink" />
     </div>
     <ArticleTags :tags="article.tags" />
-    <ArticleThumbnail :slug="article.slug" />
+    <ArticleThumbnail :slug="article.slug" :title="article.title" />
     <ArticleDescription :description="article.description" />
   </section>
 </template>

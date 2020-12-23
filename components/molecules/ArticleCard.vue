@@ -3,16 +3,13 @@
     <img
       class="lg:h-48 md:h-36 w-full object-cover object-center"
       :src="`/img/ogp/${article.slug}.png`"
-      alt="thumbnail"
+      :alt="`${article.title}のサムネイル`"
     />
     <div class="p-6">
       <ArticleDate :updated-at="article.updatedAt" />
       <h2 class="title-font text-xl font-medium text-navy my-3">
         {{ article.title }}
       </h2>
-      <!-- <p class="leading-7 mb-3 text-gray-700">
-        {{ article.description }}
-      </p> -->
     </div>
   </div>
 </template>
