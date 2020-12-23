@@ -22,7 +22,13 @@
 }
 
 .nuxt-content a {
-  color: #368ccb;
+  color: #20399D;
+  border-bottom: solid 1px #20399D;
+}
+
+.nuxt-content a:hover {
+  border: none;
+  color: #20399D;
 }
 
 .nuxt-content blockquote {
