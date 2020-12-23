@@ -7,19 +7,24 @@
         <div class="text-lg md:text-2xl text-latte">kappy tech blog</div>
       </nuxt-link>
       <div class="flex items-center justify-start">
-        <a href="https://twitter.com/kp047i/" class="md:mr-4 fa-lg text-latte">
-          <AppSocialButton>
+        <SocialIcon>
+          <a
+            href="https://twitter.com/kp047i/"
+            class="fa-lg text-latte"
+            aria-label="筆者のtwitterへのリンク"
+          >
             <fa :icon="faTwitter" />
-          </AppSocialButton>
-        </a>
-        <a
-          href="https://github.com/kp047i/kappy-tech-blog/"
-          class="fa-lg text-latte"
-        >
-          <AppSocialButton>
+          </a>
+        </SocialIcon>
+        <SocialIcon>
+          <a
+            href="https://github.com/kp047i/kappy-tech-blog/"
+            class="fa-lg text-latte"
+            aria-label="筆者のgithubへのリンク"
+          >
             <fa :icon="faGithub" />
-          </AppSocialButton>
-        </a>
+          </a>
+        </SocialIcon>
       </div>
     </div>
   </header>
@@ -29,11 +34,11 @@
 import Vue from 'vue'
 import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons'
 
-import AppSocialButton from '@/components/atoms/AppSocialButton.vue'
+import SocialIcon from '@/components/atoms/SocialIcon.vue'
 
 export default Vue.extend({
   components: {
-    AppSocialButton,
+    SocialIcon,
   },
   computed: {
     faTwitter: () => faTwitter,
