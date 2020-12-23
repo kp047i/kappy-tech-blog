@@ -108,7 +108,7 @@ const config = {
   content: {
     markdown: {
       prism: {
-        theme: 'prism-themes/themes/prism-material-oceanic.css',
+        theme: 'prism-themes/themes/prism-a11y-dark.css',
       },
     },
   },
