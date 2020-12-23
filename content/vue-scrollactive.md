@@ -1,7 +1,7 @@
 ---
-title: Nuxt/Contentにvue-scrollactiveの導入
-description: Nuxt/Contentでは簡単に記事の一覧を取得できるため、目次が作りやすいです。この記事ではvue-scrollactiveをNuxt/Contentのプロジェクトに導入して目次をデザインする方法を紹介します。
-tags: ['Nuxt.js', 'Nuxt/Content', 'vue-scrollactive']
+title: nuxt/contentにvue-scrollactiveの導入
+description: nuxt/contentでは簡単に記事の一覧を取得できるため、目次が作りやすいです。この記事ではvue-scrollactiveをnuxt/contentのプロジェクトに導入して目次をデザインする方法を紹介します。
+tags: ['Nuxt.js', 'nuxt/content', 'vue-scrollactive']
 position: 2
 date: 2020-08-19
 ---
@@ -69,4 +69,4 @@ articleはcontentから取得したオブジェクトです。scrollactiveコン
 
 ## 終わりに
 
-この記事では、vue-scrollactiveをNuxt/Contentで使用する方法を紹介しました。紹介したもの以外にもvue-scrollactiveには様々なオプションがあるためぜひいろいろ試してみて下さい。
+この記事では、vue-scrollactiveをnuxt/contentで使用する方法を紹介しました。紹介したもの以外にもvue-scrollactiveには様々なオプションがあるためぜひいろいろ試してみて下さい。

@@ -1,22 +1,22 @@
 ---
-title: Nuxt/Contentでブログの作成
-description: Nuxt/Contentを利用してブログを作成した手順の紹介をします。Nuxt/Contentを利用することで手軽にブログやポートフォリオなどの静的サイトを作ることができます。このブログを利用して勉強した内容や知見などを共有できたらなと思います。
-tags: ['Nuxt.js', 'Nuxt/Content']
+title: nuxt/contentでブログの作成
+description: nuxt/contentを利用してブログを作成した手順の紹介をします。nuxt/contentを利用することで手軽にブログやポートフォリオなどの静的サイトを作ることができます。このブログを利用して勉強した内容や知見などを共有できたらなと思います。
+tags: ['Nuxt.js', 'nuxt/content']
 position: 1
 date: 2020-08-16
 ---
 
-## Nuxt/Contentとは
+## nuxt/contentとは
 
-ブログを作成する上で、最初はNuxt+Headless CMSのContentfulを利用して作ろうかと思いましたが、最近公開された記事もgitで管理できる[Nuxt/Content](https://content.nuxtjs.org/ja)を使用することにしました。
+ブログを作成する上で、最初はNuxt+Headless CMSのContentfulを利用して作ろうかと思いましたが、GitベースのヘッドレスCMSである[nuxt/content](https://content.nuxtjs.org/ja)を使用することにしました。
 
-Nuxt/ContentはgitベースのHeadless CMSで、content/ディレクトリに記事を書くだけでブログなどの静的サイトを簡単に作ることができます。
+nuxt/contentはcontent/ディレクトリに記事を書くだけでブログなどの静的サイトを簡単に作ることができます。
 
 ## Nuxtのプロジェクト作成
 
-パッケージマネージャーにはyarnを使いました。以前までNuxtのプロジェクト作成には**create-nuxt-app**コマンドを使用していましたが、以下のコマンドを利用することで簡単にTypeScriptやContentの導入をすることができます。
+パッケージマネージャーにはyarnを使いました。以下のコマンドを利用することで簡単にTypeScriptやContentの導入をすることができます。
 
-私の環境ではTypeScriptやUIフレームワークにTailwind CSSを採用しました。Nuxt.js moduleのところではContentを選択することで、モジュールの設定を行ってくれるので選択します。
+私の環境ではTypeScriptやUIフレームワークにTailwind CSSを採用しました。Nuxt.js moduleのところではContentを選択します。
 
 ``` bash
 $ yarn create nuxt-app <project-name>
@@ -100,4 +100,4 @@ content: {
 
 ## 終わりに
 
-Nuxt/Contentを利用してブログを作成しました。これからアウトプットをたくさんしていきたい所存。
+nuxt/contentを利用してブログを作成しました。これからアウトプットをたくさんしていきたい所存。
