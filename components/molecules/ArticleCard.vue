@@ -1,18 +1,11 @@
 <template>
   <div class="h-full bg-white rounded-lg overflow-hidden shadow-lg">
-    <img
-      class="lg:h-48 md:h-36 w-full object-cover object-center"
-      :src="`/img/ogp/${article.slug}.png`"
-      alt="thumbnail"
-    />
+    <ArticleThumbnail :slug="article.slug" :title="article.title" />
     <div class="p-6">
       <ArticleDate :updated-at="article.updatedAt" />
       <h2 class="title-font text-xl font-medium text-navy my-3">
         {{ article.title }}
       </h2>
-      <!-- <p class="leading-7 mb-3 text-gray-700">
-        {{ article.description }}
-      </p> -->
     </div>
   </div>
 </template>
@@ -21,7 +14,7 @@
 import Vue, { PropOptions } from 'vue'
 import { IContentDocument } from '@nuxt/content/types/content'
 
-// import ArticleDescription from '@/components/atoms/ArticleDescription.vue'
+import ArticleThumbnail from '@/components/atoms/ArticleThumbnail.vue'
 import ArticleDate from '@/components/atoms/ArticleDate.vue'
 
 interface IToc {
@@ -42,7 +35,7 @@ interface IArticle extends IContentDocument {
 
 export default Vue.extend({
   components: {
-    // ArticleDescription,
+    ArticleThumbnail,
     ArticleDate,
   },
   props: {

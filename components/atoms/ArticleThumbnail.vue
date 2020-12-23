@@ -1,8 +1,9 @@
 <template>
-  <div class="mt-4 md:mt-6">
+  <div>
     <picture>
-      <source :srcset="`/img/ogp/${slug}.webp`" type="image/webp" />
-      <img :src="`/img/ogp/${slug}.png`" :alt="`${slug} thumbnail`" />
+      <source :srcSet="`/img/ogp/${slug}.png?webp`" type="image/webp" />
+      <source :srcSet="`/img/ogp/${slug}.png`" type="image/webp" />
+      <img :src="`/img/ogp/${slug}.png`" :alt="`${title}のサムネイル`" />
     </picture>
   </div>
 </template>
@@ -12,6 +13,10 @@ import Vue from 'vue'
 export default Vue.extend({
   props: {
     slug: {
+      type: String,
+      default: '',
+    },
+    title: {
       type: String,
       default: '',
     },
