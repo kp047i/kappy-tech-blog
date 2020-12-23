@@ -1,7 +1,8 @@
 <template>
-  <div class="mt-4 md:mt-6">
+  <div>
     <picture>
-      <source :srcset="`/img/ogp/${slug}.webp`" type="image/webp" />
+      <source :srcSet="`/img/ogp/${slug}.png?webp`" type="image/webp" />
+      <source :srcSet="`/img/ogp/${slug}.png`" type="image/webp" />
       <img :src="`/img/ogp/${slug}.png`" :alt="`${title}のサムネイル`" />
     </picture>
   </div>

@@ -85,6 +85,7 @@ const config = {
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-analytics',
+    '@aceforth/nuxt-optimized-images',
   ],
   /*
    ** Nuxt.js modules
@@ -151,6 +152,10 @@ const config = {
   },
   googleAnalytics: {
     id: 'UA-138249132-2',
+  },
+  optimizedImages: {
+    // モジュールのオプション
+    optimizeImages: true,
   },
   /*
    ** Build configuration
