@@ -1,6 +1,6 @@
 <template>
   <div class="flex items-center">
-    <fa :icon="faHistory" class="text-copper" />
+    <fa :icon="faHistory" class="text-copper" aria-label="記事の更新日" />
     <span class="ml-2">{{ updatedDate }}</span>
   </div>
 </template>

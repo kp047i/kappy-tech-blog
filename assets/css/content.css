@@ -1,12 +1,12 @@
 .nuxt-content h2 {
-  @apply font-bold text-xl mb-2;
+  @apply mb-2 text-xl font-bold;
   /* font-size: 1.6rem;
   font-weight: 500;
   padding: 16px 0; */
 }
 
 .nuxt-content h3 {
-  @apply font-bold text-lg mt-6;
+  @apply mt-6 text-lg font-bold;
   /* font-size: 1.4rem;
   font-weight: 500;
   padding: 16px 0; */
@@ -32,7 +32,7 @@
 }
 
 .nuxt-content blockquote {
-  @apply shadow-md bg-grayF3 italic pl-5 py-4 pr-3;
+  @apply py-4 pl-5 pr-3 italic shadow-md bg-grayF3;
   border-left: 4px solid #d66853;
   /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14); */
   color: #777;
@@ -51,19 +51,19 @@
 
     /* Style filename span added by @nuxt/content */
     & > .filename {
-      @apply absolute right-0 top-0 text-gray-100 z-10 leading-none mr-3 mt-3;
+      @apply absolute top-0 right-0 z-10 mt-3 mr-3 leading-none text-gray-100;
     }
 
     /* Style copy button added in `pages/_slug.vue` */
     & > .copy {
-      @apply hidden absolute right-0 bottom-0 leading-none shadow-lg px-2 py-2 text-white bg-gray-800 text-sm uppercase rounded-md border border-white font-semibold mr-3 mb-3;
+      @apply absolute bottom-0 right-0 hidden px-2 py-2 mb-3 mr-3 text-sm font-semibold leading-none text-white uppercase bg-gray-800 border border-white rounded-md shadow-lg;
 
       &:hover {
         @apply bg-gray-700;
       }
 
       &:focus {
-        @apply outline-none bg-gray-600;
+        @apply bg-gray-600 outline-none;
       }
     }
     &:hover {
@@ -76,6 +76,6 @@
   /* Force style on pre elements */
   & pre[class*="language-"] {
     /* Make pre static so the relative goes to the parent (.nuxt-content-highlight) */
-    @apply bg-gray-800 static;
+    @apply static bg-gray-800;
   }
 }
