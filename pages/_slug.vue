@@ -1,13 +1,13 @@
 <template>
   <main
-    class="flex-grow container mx-auto max-w-screen-xl lg:static px-4 md:px-12 pt-16"
+    class="container flex-grow max-w-screen-xl px-4 pt-16 mx-auto lg:static md:px-12"
   >
     <div class="flex flex-wrap mb-4 md:py-8">
       <AppArticle :article="article" />
-      <div class="w-full lg:w-2/5 lg:px-10 mt-4">
+      <div class="w-full mt-4 lg:w-2/5 lg:px-10">
         <AppArticleToc :article="article" />
       </div>
-      <!-- <div class="px-6 py-10 w-full lg:w-1/4">
+      <!-- <div class="w-full px-6 py-10 lg:w-1/4">
         <AppArticleToc :article="article" />
       </div> -->
     </div>
@@ -38,8 +38,8 @@ type DataType = {
 //   meta: MetaType[]
 // }
 
-interface AsyncDataType {
-  article: IContentDocument | IContentDocument[]
+type AsyncDataType = {
+  article: IContentDocument[] | IContentDocument
 }
 
 export default Vue.extend({
@@ -49,6 +49,7 @@ export default Vue.extend({
   },
   async asyncData({ $content, params }: Context): Promise<AsyncDataType> {
     const article = await $content(params.slug).fetch()
+
     return {
       article,
     }
