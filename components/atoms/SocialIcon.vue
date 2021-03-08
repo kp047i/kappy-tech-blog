@@ -1,7 +1,7 @@
 <template>
-  <div class="social-icon px-2 py-2 md:mr-4 rounded-full">
+  <button class="px-2 py-2 rounded-full social-icon md:mr-4">
     <slot />
-  </div>
+  </button>
 </template>
 
 <script lang="ts">

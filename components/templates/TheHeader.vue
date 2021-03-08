@@ -1,26 +1,21 @@
 <template>
-  <header class="fixed top-0 bg-navy w-full z-50 h-16 flex items-center">
+  <header class="fixed top-0 z-50 flex items-center w-full h-16 bg-navy">
     <div
-      class="relative flex justify-between w-full items-center px-4 md:px-6 lg:px-12 xl:px-16"
+      class="relative flex items-center justify-between w-full px-4 md:px-6 lg:px-12 xl:px-16"
     >
       <nuxt-link to="/">
         <div class="text-lg md:text-2xl text-latte">kappy tech blog</div>
       </nuxt-link>
       <div class="flex items-center justify-start">
-        <SocialIcon>
-          <a
-            href="https://twitter.com/kp047i/"
-            class="fa-lg text-latte"
-            aria-label="筆者のtwitterへのリンク"
-          >
+        <SocialIcon aria-label="筆者のtwitterへのリンク">
+          <a href="https://twitter.com/kp047i/" class="fa-lg text-latte">
             <fa :icon="faTwitter" />
           </a>
         </SocialIcon>
-        <SocialIcon>
+        <SocialIcon aria-label="筆者のgithubへのリンク">
           <a
             href="https://github.com/kp047i/kappy-tech-blog/"
             class="fa-lg text-latte"
-            aria-label="筆者のgithubへのリンク"
           >
             <fa :icon="faGithub" />
           </a>

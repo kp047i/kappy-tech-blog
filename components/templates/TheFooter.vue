@@ -1,9 +1,9 @@
 <template>
-  <footer class="bg-navy w-full px-4 py-4">
-    <p class="mb-2 text-center text-xs text-latte">
+  <footer class="w-full px-4 py-4 bg-navy">
+    <p class="mb-2 text-xs text-center text-latte">
       &copy; 2020 <a href="https://github.com/kp047i/">kappy</a>
     </p>
-    <p class="text-center text-xs text-latte">
+    <p class="text-xs text-center text-latte">
       <nuxt-link to="/privacy-policy/">プライバシーポリシー</nuxt-link>
     </p>
   </footer>

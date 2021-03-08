@@ -1,10 +1,10 @@
 <template>
   <div class="flex items-center mt-4 md:mt-6">
-    <fa :icon="faTags" class="text-copper" />
+    <fa :icon="faTags" class="text-copper" aria-label="記事のタグ" />
     <span
       v-for="tag in tags"
       :key="tag"
-      class="ml-2 px-2 py-1 bg-grayF3 rounded"
+      class="px-2 py-1 ml-2 rounded bg-grayF3"
     >
       {{ tag }}
     </span>

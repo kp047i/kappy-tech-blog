@@ -1,9 +1,9 @@
 <template>
-  <main class="flex-grow px-8 container mx-auto pt-16">
-    <div class="flex flex-wrap relative">
-      <div class="content my-10 w-full shadow">
-        <article class="content-article px-8 py-8 flex flex-col">
-          <h1 class="content-article__title tracking-wider">
+  <main class="container flex-grow px-8 pt-16 mx-auto">
+    <div class="relative flex flex-wrap">
+      <div class="w-full my-10 shadow content">
+        <article class="flex flex-col px-8 py-8 content-article">
+          <h1 class="tracking-wider content-article__title">
             {{ article.title }}
           </h1>
           <nuxt-content :document="article" />

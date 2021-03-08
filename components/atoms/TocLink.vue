@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="`#${id}`" class="scrollactive-item break-all">{{
+  <NuxtLink :to="`#${id}`" class="break-all scrollactive-item">{{
     text
   }}</NuxtLink>
 </template>

@@ -1,9 +1,9 @@
 <template>
-  <div class="h-full bg-white rounded-lg overflow-hidden shadow-lg">
+  <div class="h-full overflow-hidden bg-white rounded-lg shadow-lg">
     <ArticleThumbnail :slug="article.slug" :title="article.title" />
     <div class="p-6">
       <ArticleDate :updated-at="article.updatedAt" />
-      <h2 class="title-font text-xl font-medium text-navy my-3">
+      <h2 class="my-3 text-xl font-medium title-font text-navy">
         {{ article.title }}
       </h2>
     </div>

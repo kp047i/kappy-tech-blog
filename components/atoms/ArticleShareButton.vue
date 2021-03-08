@@ -1,12 +1,12 @@
 <template>
-  <div class="cursor-pointer ml-4">
+  <div class="ml-4 cursor-pointer">
     <ShareNetwork
       network="twitter"
       :url="articleLink.url"
       :title="articleLink.title"
     >
       <div
-        class="flex items-center bg-twitter text-white text-xs rounded-sm px-2 py-1"
+        class="flex items-center px-2 py-1 text-xs text-white rounded-sm bg-twitter"
       >
         <fa :icon="faTwitter" />
         <span class="ml-1">ツイート</span>

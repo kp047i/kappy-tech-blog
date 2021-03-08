@@ -2,11 +2,12 @@
   <client-only>
     <scrollactive
       active-class="active"
-      class="content sticky top-24 shadow rounded-lg p-8"
+      class="sticky p-8 rounded-lg shadow content top-24"
       :offset="80"
       :scroll-offset="80"
       :always-track="true"
       :high-light-first-item="true"
+      role="menu"
     >
       <ul>
         <li

@@ -1,13 +1,13 @@
 <template>
-  <div class="content w-full shadow rounded-lg lg:w-3/5 mt-4">
+  <div class="w-full mt-4 rounded-lg shadow content lg:w-3/5">
     <article class="flex flex-col p-4 md:p-8">
       <ArticleHeader
         :article="article"
-        class="tracking-wider leading-relaxed"
+        class="leading-relaxed tracking-wider"
       />
       <nuxt-content
         :document="article"
-        class="tracking-wider leading-relaxed"
+        class="leading-relaxed tracking-wider"
       />
     </article>
   </div>
