@@ -1,5 +1,5 @@
 .nuxt-content h2 {
-  @apply mb-2 text-xl font-bold;
+  @apply mb-4 text-xl font-bold;
   /* font-size: 1.6rem;
   font-weight: 500;
   padding: 16px 0; */
@@ -29,6 +29,22 @@
 .nuxt-content a:hover {
   border: none;
   color: #20399D;
+}
+
+.nuxt-content ul {
+  list-style: disc;
+  list-style-position: inside;
+  @apply my-4;
+}
+
+.nuxt-content li {
+  @apply py-1;
+}
+
+.nuxt-content ul li ul{
+  list-style: circle;
+  list-style-position: inside;
+  @apply my-0 ml-4;
 }
 
 .nuxt-content blockquote {
